@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <title>Tips Calculator</title>
+  </head>
+  <body>
+
+    <div id="container">
+      <!-- CALCULATOR start -->
+      <div id="calculator">
+ <h2 align="center"><font face='Righteous'>TIP CALCULATOR</font></h2>
+        <form>
+          <p>How much you paid?</p>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <!-- <span class="input-group-text">$</span> -->
+              <select id="currency">
+                <option>₽</option>
+                <option>€</option>
+                <option>$</option>
+            </select>
+            </div>
+            <input type="text" id="bill_count" class="form-control" placeholder="Amount of money">
+            <div class="input-group-append">
+              <span class="input-group-text">.00</span>
+            </div>
+          </div>
+
+          <p>How was service?</p>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="service_quality">Options</label>
+            </div>
+            <select class = "custom-select" id="service_quality">
+              <option selected> Choose..</option>
+              <option value="0.3"> 30% Wonderful</option>
+              <option value="0.2"> 20% Goog</option>
+              <option value="0.15"> 15% OK</option>
+              <option value="0.1"> 10% Bad</option>
+              <option value="0.05"> 5% Terrible</option>
+            </select>
+          </div>
+          <p>How many people was on lunch?</p>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">People</span>
+            </div>
+            <input type="text" id="people_num" class="form-control" placeholder="Number of people">
+          </div>
+          
+          <button type="button" id="calculate">Calculate</button>
+
+        </form>
+      </div>
+      <!-- CALCULATOR end -->
+      <!-- TIPS start -->
+      <div id="totalTip">
+        <span id="tip">0.00</span> ₽
+        <small id="each"><font face='Righteous'>per person</font></small>
+      </div>
+      <!-- TIPS end -->
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>

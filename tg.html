@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Калькулятор на JavaScript</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+        <script type="text/javascript">
+       /*
+        * Функция подсчета стоимости услуг на создания дизайна сайта
+        */
+        function calc() {
+            //получаем ссылку на элемент Select (Тип дизайна)
+            var type_design = document.getElementById("type_design");
+            //получаем ссылку на чекбокс (Требуется верстка?)
+            var is_html = document.getElementById("is_html");
+            //получаем ссылку на элемент input (Кол-во вариантов)
+            var count = document.getElementById("count");
+            //получаем ссылку на элемент span, в него будем писать стоимость дизайна
+            var result = document.getElementById("result"); 
+ 
+            var price = 0;
+            price += parseInt(type_design.options[type_design.selectedIndex].value);
+            price += (is_html.checked == true) ? parseInt(is_html.value) : 0;
+            price = parseInt(count.value) * price;
+ 
+            result.innerHTML = price;
+        }
+ 
+</script>
+    </head>
+    <body>
+        <b>Тип дизайна:</b><br/>
+        <select onchange="calc()" id="type_design">
+            <option value="0">Выбрать</option>
+            <option value="5000">Простой дизайн сайта</option>
+            <option value="7000">Сложный дизайн сайта</option>
+            <option value="10000">Дизайн интернет-магазина</option>
+        </select><br/>
+        <input type="checkbox" onchange="calc()" value="3000" id="is_html" />
+        <label for="is_html">Требуется верстка?</label>
+        <br/>
+        Кол-во вариантов: <input type="text" id="count" value="1" onchange="calc()" />
+        <div>Стоимость дизайна сайта: <span id="result">0</span> руб.</div>
+    </body>
+</html>

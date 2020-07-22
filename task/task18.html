@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = click;
+
+        function changeText() {
+            var inp = document.getElementById("input");
+            inp.value = "new text";
+        }
+        
+        function click() {
+            var button = document.getElementById("button");
+            button.onclick = changeText;
+        }
+    </script>
+
+    <button id="button">Change text</button>
+    <input id="input" type="text" placeholder="text">
+</body>
+</html>

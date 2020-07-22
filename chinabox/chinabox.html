@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+<body>
+    <div id="container">
+        <h2 align="center"><font face='Yeon Sung'>CHINA BOX</font></h2>
+        <form id="form">
+        <p>SIZE OF YOUR BOX</p>
+        <div class = "radio_buttons_container">
+            <input type="radio" name="size" id="small" value ="small" checked>
+            <label for="small">Small</label> <br>
+            <input type="radio" name="size" id="large" value ="large">
+            <label for="large">Large</label>
+        </div>
+
+        <p>BASE OF YOUR BOX</p>
+        <div class= "radio_buttons_container">
+            <input type="radio" name="base" id="noodles" value ="noodles" checked>
+            <label for=" noodles"> Noodles</label> <br>
+            
+            <input type="radio" name="base" id="rice" value ="rice">
+            <label for="rice">Rice</label>
+        </div> 
+
+        <p>TOPPING FOR YOUR BOX</p>
+        <div class ="box">
+        <div class = "input_checkbox">
+          
+            <input type="checkbox" name="add" id="pork" value ="pork" checked>
+            <label for="pork"> Pork </label> <br>
+
+            <input type="checkbox" name="add" id="beef" value ="beef">
+            <label for="beef"> Beef</label> 
+        </div> 
+        <div class = "input_checkbox">
+            <input type="checkbox" name="add" id="chicken" value ="chicken">
+            <label for="chicken"> Chicken</label> <br>
+
+            <input type="checkbox" name="add" id="vegetables" value ="vegetables">
+            <label for="vegetables"> Vegetables</label>
+            
+        </div>
+	 <p>SOUSE FOR YOUR BOX</p>
+        <div class ="box">
+        <div class = "input_checkbox">
+          
+            <input type="checkbox" name="add" id="teriyaki_sauce" value ="teriyaki_sauce" checked>
+            <label for="teriyaki_sauce">Teriyaki sauce </label> <br>
+
+           
+        </div> 
+        <div class = "input_checkbox">
+            <input type="checkbox" name="add" id="oyster_sauce" value ="oyster_sauce">
+            <label for="oyster_sauce">Oyster sauce</label> <br>
+
+            <input type="checkbox" name="add" id="soy_sauce" value ="soy_sauce">
+            <label for="soy_sauce">Soy sauce</label>
+            
+        </div>
+        
+    </div>
+
+        <p>DO YOU WANT TO ADD CRACKERS?</p>
+        <div class = "radio_buttons_container">
+            <input type="radio" name="add" id="yes" value ="yes" checked>
+            <label for="yes">Yes</label> <br>
+            <input type="radio" name="add" id="no" value ="no">
+            <label for="no">No</label>
+        </div>
+
+         <input type="submit" id = "calculate" value="Calculate">
+        <!-- <button type="button" id="calculate">Calculate</button> -->
+        </form>
+    <!-- CALCULATOR end -->
+    <!-- TIPS start -->
+    <div id="expense">
+      <span id="prise">0.00</span> ₽<br>
+      <span id="calories">00</span> <small>calories</small>
+    </div>
+    <!-- TIPS end -->
+  </div>
+  <script src="chinabox.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = click;
+
+        function changeColor() {
+            var inp = document.getElementById("input");
+            inp.style.color='red'
+        }
+        
+        function click() {
+            var button = document.getElementById("button");
+            button.onclick = changeColor;
+        }
+    </script>
+
+    <button id="button">Change color</button>
+    <input id="input" type="text" placeholder="Text" value="Text">
+</body>
+</html>
