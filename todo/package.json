@@ -1,0 +1,20 @@
+{
+  "name": "ToDoList",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp":"node ./node_modules/gulp/bin/gulp.js",
+    "sass":"node-sass -w scss/ -o app/styles/ --recursive"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "node-sass": "^4.14.1"
+  }
+}

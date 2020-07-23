@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <form id="form">
+            <input type="text" value="1"><br>
+            <input type="text" value="2"><br>
+            <input type="text" value="3">
+            </form>
+            <button>Sum of numbers</button>
+        <script>
+            var button = document.querySelector('button');
+            button.addEventListener('click', summary);
+            function summary(){
+                var form = document.getElementById('form');
+                for (var i = 0, sum = 0; i < form.elements.length; i++){
+                    var sum = sum + +form.elements[i].value;
+                }
+                alert('Сумма: ' + sum);
+            }
+        </script>
+    </body>
+</html>

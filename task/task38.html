@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <i id="elem">
+            <span>Descendant</span>
+            <p>Descendant 2.0</p>
+        </i>
+        <span>Not a descendant</span>
+        <script>
+            var elem = document.getElementById('elem');
+            for (var i = 0; i < elem.children.length; i++){
+                elem.children[i].innerHTML += '!';
+            }
+        </script>
+    </body>
+</html>

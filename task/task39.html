@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <ul>
+            <li>Желтый</li>
+            <li>Зеленый</li>
+            <li>Черный</li>
+            <li>Синий</li>
+            <li>Красный</li>
+        </ul>
+            <button>Добавить пункт</button>
+        <script>
+            var ul = document.querySelector('ul');
+             button = document.querySelector('button');
+            button.addEventListener('click', addLi);
+            function addLi(event){
+                var li = document.createElement('li');
+                li.innerHTML = 'пункт';
+                ul.appendChild(li);
+            }
+            ul.addEventListener('click', addToken);
+            function addToken(event){
+                event.target.innerHTML += '!';
+            }
+        </script>
+    </body>
+</html>

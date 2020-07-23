@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <i id="elem">
+            <span>Descendant</span>
+            <p>Descendant 2.0</p>
+            </i>
+        <script>
+            var elem = document.getElementById('elem');
+            var childFirst = elem.firstElementChild;
+            childFirst.style.cssText = 'color: #f00;'
+        </script>
+    </body>
+</html>
